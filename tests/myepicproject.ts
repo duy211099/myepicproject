@@ -20,16 +20,13 @@ describe("myepicproject", () => {
     it("Is initialized!", async () => {
         // Add your test here.
         console.log('✅✅✅')
-        console.log('baseAccount  ', baseAccount.publicKey, baseAccount.publicKey.toBase58())
-        console.log('programId  ', SystemProgram.programId)
-        console.log('program.methods.initialize', program.methods.initialize)
+        console.log('account ', baseAccount.publicKey.toBase58(), provider.wallet.publicKey.toBase58())
         console.log('✅✅✅')
         const tx = await program.methods
             .initialize()
             .accounts({
                 baseAccount: baseAccount.publicKey,
                 user: provider.wallet.publicKey,
-                // systemProgram: 'EjoBwG3XANnFLkFMnEF8EAKSXWKB92Xdszfujk3g2CP6',
                 systemProgram: SystemProgram.programId,
             })
             .signers([baseAccount])
