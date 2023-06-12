@@ -7,7 +7,7 @@ describe("myepicproject", () => {
     // Configure the client to use the local cluster.
     anchor.setProvider(anchor.AnchorProvider.env());
 
-    const program: Program<Myepicproject> = anchor.workspace.Myepicproject;
+    const program = anchor.workspace.Myepicproject as Program<Myepicproject>;
 
     it("Is initialized!", async () => {
         // Add your test here.
