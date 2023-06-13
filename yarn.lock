@@ -6,19 +6,19 @@ __metadata:
   cacheKey: 8
 
 "@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.17.2":
-  version: 7.22.3
-  resolution: "@babel/runtime@npm:7.22.3"
+  version: 7.22.5
+  resolution: "@babel/runtime@npm:7.22.5"
   dependencies:
     regenerator-runtime: ^0.13.11
-  checksum: 8fc50785ca4cba749fed90bffca7e6fd52d4709755654e95b8d2a945fc034b56fb8c2e8a0183fea7c4abb86bf5fa77678c0ea35163b6920649833d180c34c234
+  checksum: 12a50b7de2531beef38840d17af50c55a094253697600cee255311222390c68eed704829308d4fd305e1b3dfbce113272e428e9d9d45b1730e0fede997eaceb1
   languageName: node
   linkType: hard
 
-"@coral-xyz/anchor@npm:^0.27.0":
-  version: 0.27.0
-  resolution: "@coral-xyz/anchor@npm:0.27.0"
+"@coral-xyz/anchor@npm:^0.28.0":
+  version: 0.28.0
+  resolution: "@coral-xyz/anchor@npm:0.28.0"
   dependencies:
-    "@coral-xyz/borsh": ^0.27.0
+    "@coral-xyz/borsh": ^0.28.0
     "@solana/web3.js": ^1.68.0
     base64-js: ^1.5.1
     bn.js: ^5.1.2
@@ -33,19 +33,19 @@ __metadata:
     snake-case: ^3.0.4
     superstruct: ^0.15.4
     toml: ^3.0.0
-  checksum: 369581b2ee0bb3a95e04934ad91459d921b62d7f883fafa292818eb2550b717d2ced5c98c2a817b73d6dc8dab904a41d681d11c110c41c7f78f6135d9942eb4c
+  checksum: 58b3677b5b2ce2c779045184ce4a0ef696966a6a58f41c1c56f6f178db0491acecb6ec677ce0502f0b382a2c724f9c2860d82cc88601784d556d95fbeda415e5
   languageName: node
   linkType: hard
 
-"@coral-xyz/borsh@npm:^0.27.0":
-  version: 0.27.0
-  resolution: "@coral-xyz/borsh@npm:0.27.0"
+"@coral-xyz/borsh@npm:^0.28.0":
+  version: 0.28.0
+  resolution: "@coral-xyz/borsh@npm:0.28.0"
   dependencies:
     bn.js: ^5.1.2
     buffer-layout: ^1.2.0
   peerDependencies:
     "@solana/web3.js": ^1.68.0
-  checksum: b5e06650ad3f8cfbdb9c96c0b7329f07345f258fce8cfb1737c6ee1bf991d8fd4e90a3ac397a1f3d98c39173cc10bad3255247d77385b3542d20a0bf7e3878d9
+  checksum: bc2b06b777f9ed43d3b886d2350826bd44d5b932c4fd4471af5956e8755236f5854938c890ee4986d88f61d1439e1d84e715c43dcb6dca4e76198c1ce8dc7a58
   languageName: node
   linkType: hard
 
@@ -171,9 +171,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.2.5
-  resolution: "@types/node@npm:20.2.5"
-  checksum: 38ce7c7e9d76880dc632f71d71e0d5914fcda9d5e9a7095d6c339abda55ca4affb0f2a882aeb29398f8e09d2c5151f0b6586c81c8ccdfe529c34b1ea3337425e
+  version: 20.3.1
+  resolution: "@types/node@npm:20.3.1"
+  checksum: 63a393ab6d947be17320817b35d7277ef03728e231558166ed07ee30b09fd7c08861be4d746f10fdc63ca7912e8cd023939d4eab887ff6580ff704ff24ed810c
   languageName: node
   linkType: hard
 
@@ -1478,14 +1478,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ms@npm:2.1.2, ms@npm:^2.0.0":
+"ms@npm:2.1.2":
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
   checksum: 673cdb2c3133eb050c745908d8ce632ed2c02d85640e2edb3ace856a2266a813b30c613569bf3354fdf4ea7d1a1494add3bfa95e2713baa27d0c2c71fc44f58f
   languageName: node
   linkType: hard
 
-"ms@npm:2.1.3":
+"ms@npm:2.1.3, ms@npm:^2.0.0":
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
   checksum: aa92de608021b242401676e35cfa5aa42dd70cbdc082b916da7fb925c542173e36bce97ea3e804923fe92c0ad991434e4a38327e15a1b5b5f945d66df615ae6d
@@ -1755,7 +1755,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@coral-xyz/anchor": ^0.27.0
+    "@coral-xyz/anchor": ^0.28.0
     "@types/bn.js": ^5.1.0
     "@types/chai": ^4.3.0
     "@types/mocha": ^9.0.0
@@ -2255,10 +2255,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:20.2.4, yargs-parser@npm:^20.2.2":
+"yargs-parser@npm:20.2.4":
   version: 20.2.4
   resolution: "yargs-parser@npm:20.2.4"
   checksum: d251998a374b2743a20271c2fd752b9fbef24eb881d53a3b99a7caa5e8227fcafd9abf1f345ac5de46435821be25ec12189a11030c12ee6481fef6863ed8b924
+  languageName: node
+  linkType: hard
+
+"yargs-parser@npm:^20.2.2":
+  version: 20.2.9
+  resolution: "yargs-parser@npm:20.2.9"
+  checksum: 8bb69015f2b0ff9e17b2c8e6bfe224ab463dd00ca211eece72a4cd8a906224d2703fb8a326d36fdd0e68701e201b2a60ed7cf81ce0fd9b3799f9fe7745977ae3
   languageName: node
   linkType: hard
 
