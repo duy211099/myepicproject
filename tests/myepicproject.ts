@@ -34,17 +34,20 @@ describe("myepicproject", () => {
         let account = await program.account.baseAccount.fetch(baseAccount.publicKey);
         console.log('👀 GIF Count', account.totalGifs.toString())
 
-
         // Call add_gif!
         await program.methods
-            .addGif()
+            .addGif("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmY1NTg3NDhjZjgwYWJlNTdkYWIwYmFhY2VkNzYwNDc5ZjBmYmY2NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/ZauVzMa0xQxHGYK4Qx/giphy.gif")
             .accounts({
                 baseAccount: baseAccount.publicKey,
+                user: provider.wallet.publicKey,
             }).rpc();
         ;
 
-        // Get the account again to see what changed.
+        // Call the account.
         account = await program.account.baseAccount.fetch(baseAccount.publicKey);
         console.log('👀 GIF Count', account.totalGifs.toString())
+
+        // Access gif_list on the account!
+        console.log('👀 GIF List', account.gifList)
     });
 });
